@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <windows.h>
 
 #define ROW 9
 #define COL 9
@@ -97,6 +98,8 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
             {
                 printf("很遗憾，你被炸死了\n");
                 DisplayBoard(mine, row, col);
+                system("pause");
+                system("cls");
                 break;
             }
             else
@@ -116,6 +119,8 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
     {
         printf("恭喜你，排雷成功\n");
         DisplayBoard(mine, row, col);
+        system("pause");
+        system("cls");
     }
 }
 
